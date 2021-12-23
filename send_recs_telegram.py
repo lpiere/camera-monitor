@@ -17,6 +17,7 @@ def send_video(paths=[]):
     
 
 def start_monitor():
+    ts.send(messages=['monitor iniciado'])
     while True:
         videos = os.listdir('./videos')
         send_video(paths=videos)

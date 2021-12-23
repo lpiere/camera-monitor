@@ -49,7 +49,7 @@ def start_move_detector_with_pycamera(time_wrap):
         # and occupied/unoccupied text
         frame_cv2 = frame.array
         # show the frame
-        cv2.imshow("Frame", frame_cv2)
+        # cv2.imshow("Frame", frame_cv2)
 
         if len(prox_frame) == 0:
             prox_frame = frame_cv2.copy()
@@ -58,7 +58,7 @@ def start_move_detector_with_pycamera(time_wrap):
         rawCapture.truncate(0)
         
         prox_frame = frame_cv2.copy()
-        key = cv2.waitKey(1) & 0xFF
+        # key = cv2.waitKey(1) & 0xFF
         
-        if key == ord("q"):
-            break
+        # if key == ord("q"):
+        #     break
