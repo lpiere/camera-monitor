@@ -51,8 +51,8 @@ def rec_moviment(should_capture, capture, size, frame, file_name):
         os.mkdir('./videos')
 
     if should_capture and capture == None:
-        new_capture = cv2.VideoWriter(f'./videos/{file_name}.rec.mp4', 
-                        cv2.VideoWriter_fourcc(*'MPEG'),
+        new_capture = cv2.VideoWriter(f'./videos/{file_name}.rec.avi', 
+                        cv2.VideoWriter_fourcc(*'DIVX'),
                         20,
                         size)
         # print('start rec', file_name)
@@ -63,7 +63,7 @@ def rec_moviment(should_capture, capture, size, frame, file_name):
         return capture
     elif capture != None:
         # print('rec released')
-        os.rename(f'./videos/{file_name}.rec.mp4', f'./videos/{file_name}.mp4')
+        os.rename(f'./videos/{file_name}.rec.avi', f'./videos/{file_name}.avi')
         capture.release()
         return None
 
